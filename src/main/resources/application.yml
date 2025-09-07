@@ -5,13 +5,12 @@ spring:
   application:
     name: spring-boot-validation
 
-  #MySQL Configuration
+  # PostgreSQL Configuration
   datasource:
     url: jdbc:postgresql://localhost:5432/springboot
-    username: ${MYSQL_USER:nirmala}
-    password: ${MYSQL_PASSWORD:nirmala@123}
+    username: ${POSTGRES_USER:nirmala}
+    password: ${POSTGRES_PASSWORD:nirmala@123}
 
-    # HikariCP Connection Pool Configuration
     hikari:
       maximum-pool-size: 10
       minimum-idle: 5
@@ -20,18 +19,15 @@ spring:
       max-lifetime: 1800000
       connection-timeout: 30000
 
-  #JPA Configuration
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
-        jdbc.time_zone: Asia/Kolkata
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
-# Swagger Configuration
 springdoc:
   swagger-ui:
     path: /documentation
@@ -40,7 +36,7 @@ springdoc:
 
 openapi:
   title: 🚀 Spring Boot With SQL DB
-  description: Spring Boot with SQL DB using Spring Data JPA and Oracle Database
+  description: Spring Boot with SQL DB using Spring Data JPA and PostgreSQL Database
   version: 1.0.0
   contact:
     name: Nirmala Sahu
@@ -50,4 +46,3 @@ openapi:
     - name: dev
       url: http://localhost:9897
       description: Local Development URL
-

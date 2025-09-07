@@ -1,18 +1,17 @@
 version: '3.8'
 
 services:
-  # PostgreSQL Container Configuration
+  # PostgreSQL Database
   postgres:
     image: postgres:15
-    container_name: postgres
+    container_name: postgres_db
+    restart: always
     ports:
       - "5432:5432"
-    restart: always
     environment:
-      POSTGRES_DB: springboot             # database to create
-      POSTGRES_USER: nirmala              # application user
-      POSTGRES_PASSWORD: nirmala@123      # user password
-      TZ: Asia/Kolkata
+      POSTGRES_DB: springboot
+      POSTGRES_USER: nirmala
+      POSTGRES_PASSWORD: nirmala@123
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
