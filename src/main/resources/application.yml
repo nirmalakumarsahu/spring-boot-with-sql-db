@@ -5,9 +5,9 @@ spring:
   application:
     name: spring-boot-validation
 
-  #Oracle Configuration
+  #MySQL Configuration
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521/XEPDB1
+    url: jdbc:mysql://localhost:3307/microservices
     username: ${MYSQL_USER:nirmala}
     password: ${MYSQL_PASSWORD:nirmala@123}
 
@@ -27,7 +27,7 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.OracleDialect
+        dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
 
 # Swagger Configuration
