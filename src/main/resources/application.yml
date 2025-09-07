@@ -8,8 +8,8 @@ spring:
   #Oracle Configuration
   datasource:
     url: jdbc:oracle:thin:@localhost:1521/XEPDB1
-    username: ${MYSQL_USER:nirmala}
-    password: ${MYSQL_PASSWORD:nirmala@123}
+    username: ${ORACLE_USER:nirmala}
+    password: ${ORACLE_PASSWORD:nirmala@123}
 
     # HikariCP Connection Pool Configuration
     hikari:
