@@ -1,25 +1,27 @@
 version: '3.8'
 
 services:
-  # MySQL Container Configuration
-  mysql:
-    image: mysql:latest
-    container_name: mysql_ms
+  # MariaDB Container Configuration
+  mariadb:
+    image: mariadb:11.4   # latest LTS version (can use mariadb:latest too)
+    container_name: mariadb
     ports:
-      - "3307:3306"
+      - "3308:3306"
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: microservices
-      MYSQL_USER: nirmala
-      MYSQL_PASSWORD: nirmala@123
+      MYSQL_ROOT_PASSWORD: root        # root user password
+      MYSQL_DATABASE: springboot        # database to create
+      MYSQL_USER: nirmala                   # application user
+      MYSQL_PASSWORD: nirmala@123           # application user password
+
     volumes:
-      - mysql_data:/var/lib/mysql
+      - mariadb_data:/var/lib/mysql
     networks:
-      - mysql_network
+      - mariadb_network
 
 volumes:
-  mysql_data:
+  mariadb_data:
 
 networks:
-  mysql_network:
+  mariadb_network:
     driver: bridge
