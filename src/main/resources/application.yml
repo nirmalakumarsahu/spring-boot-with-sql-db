@@ -7,7 +7,7 @@ spring:
 
   #MySQL Configuration
   datasource:
-    url: jdbc:mariadb://localhost:3308/springboot
+    url: jdbc:postgresql://localhost:5432/springboot
     username: ${MYSQL_USER:nirmala}
     password: ${MYSQL_PASSWORD:nirmala@123}
 
@@ -27,7 +27,7 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MariaDBDialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
 # Swagger Configuration

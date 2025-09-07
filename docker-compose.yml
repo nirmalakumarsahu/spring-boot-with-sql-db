@@ -1,27 +1,26 @@
 version: '3.8'
 
 services:
-  # MariaDB Container Configuration
-  mariadb:
-    image: mariadb:11.4   # latest LTS version (can use mariadb:latest too)
-    container_name: mariadb
+  # PostgreSQL Container Configuration
+  postgres:
+    image: postgres:16          # latest stable version
+    container_name: postgres
     ports:
-      - "3308:3306"
+      - "5432:5432"
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root        # root user password
-      MYSQL_DATABASE: springboot        # database to create
-      MYSQL_USER: nirmala                   # application user
-      MYSQL_PASSWORD: nirmala@123           # application user password
-
+      POSTGRES_DB: springboot             # database to create
+      POSTGRES_USER: nirmala              # application user
+      POSTGRES_PASSWORD: nirmala@123      # user password
+      TZ: Asia/Kolkata
     volumes:
-      - mariadb_data:/var/lib/mysql
+      - postgres_data:/var/lib/postgresql/data
     networks:
-      - mariadb_network
+      - postgres_network
 
 volumes:
-  mariadb_data:
+  postgres_data:
 
 networks:
-  mariadb_network:
+  postgres_network:
     driver: bridge
