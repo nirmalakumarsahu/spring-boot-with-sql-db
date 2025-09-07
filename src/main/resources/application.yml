@@ -27,6 +27,7 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
+        jdbc.time_zone: Asia/Kolkata
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 

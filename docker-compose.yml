@@ -3,7 +3,7 @@ version: '3.8'
 services:
   # PostgreSQL Container Configuration
   postgres:
-    image: postgres:16          # latest stable version
+    image: postgres:15
     container_name: postgres
     ports:
       - "5432:5432"
