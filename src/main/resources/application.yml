@@ -5,11 +5,11 @@ spring:
   application:
     name: spring-boot-validation
 
-  #MySQL Configuration
+  #MariaDB Configuration
   datasource:
     url: jdbc:mariadb://localhost:3308/springboot
-    username: ${MYSQL_USER:nirmala}
-    password: ${MYSQL_PASSWORD:nirmala@123}
+    username: ${MARIADB_USER:nirmala}
+    password: ${MARIADB_PASSWORD:nirmala@123}
 
     # HikariCP Connection Pool Configuration
     hikari:
@@ -39,7 +39,7 @@ springdoc:
 
 openapi:
   title: 🚀 Spring Boot With SQL DB
-  description: Spring Boot with SQL DB using Spring Data JPA and Oracle Database
+  description: Spring Boot with SQL DB using Spring Data JPA and MariaDB Database.
   version: 1.0.0
   contact:
     name: Nirmala Sahu
