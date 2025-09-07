@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  oracle-db:
+    image: gvenzl/oracle-xe:21-slim   # Oracle XE 21c
+    container_name: oracle-db
+    ports:
+      - "1521:1521"   # Oracle DB listener
+    environment:
+      ORACLE_PASSWORD: root   # SYS, SYSTEM, PDBADMIN password
+      APP_USER: nirmala              # optional: application user
+      APP_USER_PASSWORD: nirmala@123 # optional: application user password
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+    networks:
+      - oracle_network
+
+volumes:
+  oracle_data:
+
+networks:
+  oracle_network:
+    driver: bridge
