@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: spring-boot-validation
+    name: spring-boot-data-jpa-with-sql-db
 
   #MySQL Configuration
   datasource:
