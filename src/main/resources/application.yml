@@ -39,7 +39,7 @@ springdoc:
 
 openapi:
   title: 🚀 Spring Boot Data JPA With SQL DB
-  description: Spring Boot Data JPA with SQL DB using Spring Data JPA and PostgreSQL Database
+  description: Spring Boot Data JPA with SQL DB using Spring Data JPA and MySQL Database
   version: 1.0.0
   contact:
     name: Nirmala Sahu
