@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootWithSqlDbApplication {
+public class SpringBootDataJpaWithSqlDbApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootWithSqlDbApplication.class, args);
+		SpringApplication.run(SpringBootDataJpaWithSqlDbApplication.class, args);
 	}
 
 }
