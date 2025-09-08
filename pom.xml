@@ -10,10 +10,10 @@
 	</parent>
 
 	<groupId>com.sahu.spring-boot-data-jpa</groupId>
-	<artifactId>spring-boot-with-sql-db</artifactId>
+	<artifactId>spring-boot-data-jpa-with-sql-db</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-with-sql-db</name>
-	<description>spring-boot-with-sql-db</description>
+	<name>spring-boot-data-jpa-with-sql-db</name>
+	<description>spring-boot-data-jpa-with-sql-db</description>
     <url>https://example.com</url>
 
 	<properties>
