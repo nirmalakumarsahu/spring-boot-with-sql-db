@@ -35,8 +35,8 @@ springdoc:
     path: /api-docs
 
 openapi:
-  title: 🚀 Spring Boot With SQL DB
-  description: Spring Boot with SQL DB using Spring Data JPA and PostgreSQL Database
+  title: 🚀 Spring Boot Data JPA With SQL DB
+  description: Spring Boot Data JPA with SQL DB using Spring Data JPA and PostgreSQL Database
   version: 1.0.0
   contact:
     name: Nirmala Sahu
